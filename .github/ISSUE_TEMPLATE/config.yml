@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Report a security vulnerability
+    url: https://github.com/beardofedu/awesome-github-governance/security/advisories/new
+    about: Report vulnerabilities privately. Don't open a public issue.
+  - name: GitHub product support
+    url: https://support.github.com/
+    about: For problems with GitHub products, contact GitHub Support.
+  - name: GitHub Community discussions
+    url: https://github.com/orgs/community/discussions
+    about: Ask general GitHub questions and share feedback with the community.

@@ -1,0 +1,21 @@
+title: "Awesome GitHub Governance"
+description: "Practical controls for GitHub Enterprise, GitHub Actions, and Advanced Security."
+baseurl: "/awesome-github-governance"
+url: "https://beardofedu.github.io"
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - README.md
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"

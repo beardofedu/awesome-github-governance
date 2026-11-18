@@ -1,0 +1,31 @@
+{
+  "sources": {
+    "changelog": {
+      "reviewed_through": null,
+      "urls": ["https://github.blog/changelog/", "https://github.blog/changelog/feed/", "https://github.blog/"]
+    },
+    "enterprise": {
+      "reviewed_through": null,
+      "urls": [
+        "https://docs.github.com/en/enterprise-cloud@latest/admin/overview/establishing-a-governance-framework-for-your-enterprise",
+        "https://docs.github.com/en/enterprise-server@3.22/admin/overview/establishing-a-governance-framework-for-your-enterprise",
+        "https://docs.github.com/en/enterprise-cloud@latest/admin/concepts/security-and-compliance/enterprise-policies"
+      ]
+    },
+    "actions": {
+      "reviewed_through": null,
+      "urls": [
+        "https://docs.github.com/en/enterprise-cloud@latest/actions/reference/security/secure-use",
+        "https://docs.github.com/en/enterprise-server@3.22/actions/reference/security/secure-use"
+      ]
+    },
+    "advanced-security": {
+      "reviewed_through": null,
+      "urls": [
+        "https://docs.github.com/en/enterprise-cloud@latest/code-security/getting-started/github-security-features",
+        "https://docs.github.com/en/enterprise-server@3.22/code-security/getting-started/github-security-features",
+        "https://docs.github.com/en/get-started/learning-about-github/about-github-advanced-security"
+      ]
+    }
+  }
+}
