@@ -16,9 +16,20 @@ async function main() {
     await menu.click();
     assert.equal(await menu.getAttribute("aria-expanded"), "true");
     const sidebar = page.getByRole("navigation", { name: "Guide sections" });
+    await sidebar.locator("a[href$='/sections/actions-policy/']").focus();
+    await page.keyboard.press("Escape");
+    assert.equal(await menu.getAttribute("aria-expanded"), "false");
+    assert.equal(await page.evaluate(() => document.activeElement?.textContent?.trim()), "Menu");
+    await menu.click();
     await sidebar.locator("a[href$='/sections/actions-policy/']").click();
     await page.waitForURL("**/sections/actions-policy/");
     assert.match(await page.title(), /Actions/i);
+    await page.emulateMedia({ reducedMotion: "reduce" });
+    assert.equal(
+      await page.locator(".heading-anchor").first().evaluate(element => getComputedStyle(element).transitionDuration),
+      "0s",
+      "Reduced-motion preferences disable decorative transitions"
+    );
 
     await page.getByRole("button", { name: /Search controls/ }).click();
     const search = page.getByRole("dialog");

@@ -56,6 +56,14 @@
       var open = sidebar.classList.toggle('open');
       toggle.setAttribute('aria-expanded', String(open));
     });
+
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && sidebar.classList.contains('open')) {
+        sidebar.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+        toggle.focus();
+      }
+    });
   }
 
   /* ----- "In this article" table of contents ---------------------------- */
