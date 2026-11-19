@@ -877,3 +877,13 @@ body:has(.search-dialog[open]) { overflow: hidden; }
   .search-dialog { padding: 16px; }
   .pager { grid-template-columns: 1fr; }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
