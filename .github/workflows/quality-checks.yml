@@ -116,7 +116,7 @@ jobs:
 
       - name: Check compiled workflow is current
         run: |
-          gh aw compile --no-check-update
+          gh aw compile github-governance-watch --no-check-update --action-mode action --action-tag 862164f9ffbcce2e24e5397da938e3b19f839dce
           git diff --exit-code -- .github/workflows/github-governance-watch.lock.yml .github/aw/actions-lock.json
 
   validate-calendar:
