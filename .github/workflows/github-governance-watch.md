@@ -111,7 +111,10 @@ try GitHub tools for official GitHub-hosted material or a standalone curl reques
 to the official HTTPS URL:
 `curl --fail --silent --show-error --location --connect-timeout 15 --max-time 60 'https://github.blog/changelog/feed/'`.
 Run one command per call. Do not use shell pipelines, substitutions, redirection,
-interpreters or shell writes. On a confirmed rate limit honor a reasonable
+interpreters or shell writes. If a read-only fetch was accidentally truncated,
+discard the partial result and retry once with a standalone allowed fetch; continue
+the review if it succeeds. This does not override an explicit permission denial.
+On a confirmed rate limit honor a reasonable
 `Retry-After` once (up to 60 s); otherwise report incomplete. On an explicit
 permission denial, stop normal work immediately and use `report_incomplete`;
 do not route around the denial or use `noop`.
